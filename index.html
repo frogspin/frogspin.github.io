@@ -2,10 +2,32 @@
 	<title>frog</title>
 	<link rel='stylesheet' href='frog.css'>
 	<script src='konami.js'></script>
-	<script src='duck.js'></script>
+	<script src='seekrit.js'></script>
 </head>
 <body>
 	<div>
 		<img src="frog.gif" alt='frog gif' loop=infinite class="center" id='stretchy'>
 	</div>
+	<p id="fpsCount"></p>
+	<script>
+	const times = [];
+	let fps;
+
+	function refreshLoop() {
+  		window.requestAnimationFrame(() => {
+    	const now = performance.now();
+    	while (times.length > 0 && times[0] <= now - 1000) {
+     	times.shift();
+    	}
+    	times.push(now);
+    	fps = times.length;
+    	document.getElementById('fpsCount').innerText = fps.toString();
+    	refreshLoop();
+  });
+}
+
+refreshLoop();
+
+refreshLoop();
+	</script>
 </body>
