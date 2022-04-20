@@ -1,5 +1,5 @@
-const duck = new Konami("duck.html")
-const frog = new Konami("phrog.html")
+const duck = new Konami("https://frogspin.github.io/duck.html")
+const frog = new Konami("https://frogspin.github.io/")
 
 duck.pattern = "68856775"
 frog.pattern = "70827971"
