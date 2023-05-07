@@ -1,10 +1,11 @@
 const duck = new Konami("https://frogspin.github.io/duck.html")
 const frog = new Konami("https://frogspin.github.io/")
-
+const max = new Konami("https://frogspin.github.io/max.html")
 duck.pattern = "68856775"
 frog.pattern = "70827971"
-
+max.pattern = "776588"
 var shown = 1;
+
 function showfps() {
 	if (shown == 0) {
 		console.log(shown)
